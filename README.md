@@ -47,6 +47,25 @@ El otro KPI del dashboard de Power BI es:
 
 ## Análisis de Datos
 
+### Acceso por la Tecnología de Conexión ADSL
+![Acceso a la tecnología](Imagenes/Accesos_tecnologia.png)
+
+**Conclusiones:**
+
+1. **Histograma:** 
+   La distribución de ADSL_LOG parece ser asimétrica a la derecha, con una alta concentración de valores en torno al valor 11 y algunos valores atípicos muy altos.
+
+2. **Gráfico de Violín:** 
+   Confirma la distribución asimétrica a la derecha observada en el histograma, con una alta densidad en valores bajos y una cola más larga hacia la derecha.
+
+3. **Presencia de Outliers:** 
+   Tanto el histograma como el gráfico de violín sugieren la presencia de valores atípicos muy altos que podrían estar influyendo en la distribución y en los cálculos estadísticos.
+
+4. **Rango de Valores:** 
+   La mayoría de los valores de ADSL_LOG se encuentran entre 0 y aproximadamente 6, aunque hay algunos que alcanzan hasta 12.
+
+**Resumen:** La variable ADSL_LOG muestra una distribución asimétrica con una alta concentración de valores alrededor de 11 y algunos valores atípicos significativos en el extremo superior.
+
 ### Acceso por Cada 100 Individuos
 ![Accesos por cada 100 hogares](Imagenes/Evolucion_Acceso_cada_100_Habitantes.png)
 
@@ -69,24 +88,7 @@ El otro KPI del dashboard de Power BI es:
 
 **Resumen:** Los gráficos muestran un crecimiento continuo en el porcentaje de accesos por cada 100 habitantes en Capital Federal, con un incremento notable a partir de 2017 y valores máximos en 2023. La tendencia es uniforme en los cuatro trimestres, sin estacionalidad significativa.
 
-### Acceso por la Tecnología de Conexión ADSL
-![Acceso a la tecnología](Imagenes/Accesos_tecnologia.png)
 
-**Conclusiones:**
-
-1. **Histograma:** 
-   La distribución de ADSL_LOG parece ser asimétrica a la derecha, con una alta concentración de valores en torno al valor 11 y algunos valores atípicos muy altos.
-
-2. **Gráfico de Violín:** 
-   Confirma la distribución asimétrica a la derecha observada en el histograma, con una alta densidad en valores bajos y una cola más larga hacia la derecha.
-
-3. **Presencia de Outliers:** 
-   Tanto el histograma como el gráfico de violín sugieren la presencia de valores atípicos muy altos que podrían estar influyendo en la distribución y en los cálculos estadísticos.
-
-4. **Rango de Valores:** 
-   La mayoría de los valores de ADSL_LOG se encuentran entre 0 y aproximadamente 6, aunque hay algunos que alcanzan hasta 12.
-
-**Resumen:** La variable ADSL_LOG muestra una distribución asimétrica con una alta concentración de valores alrededor de 11 y algunos valores atípicos significativos en el extremo superior.
 
 ### Porcentaje de Acceso por Cada 100 Hogares
 ![Boxplot](Imagenes/Porcen_Accesos_cda_100_hogares.png)
