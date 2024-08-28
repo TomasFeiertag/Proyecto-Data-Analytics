@@ -39,7 +39,7 @@ En el dashboard de Power BI se definieron dos KPI, uno basado en la propuesta de
 
 El otro KPI del dashboard de Power BI es:
 
-- **Aumentar en un 3.8% el acceso al servicio de internet para el próximo trimestre, cada 100 individuos, por provincia**.
+- **Aumentar en un 4.2% el acceso al servicio de internet para el próximo trimestre, cada 100 individuos, por provincia**.
 
   Donde:
   - "Nuevos_ingresos" se refiere al número de individuos con acceso a Internet después del próximo trimestre.
