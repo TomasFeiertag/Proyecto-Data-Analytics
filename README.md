@@ -1,96 +1,91 @@
-# Proyecto Data Analytics
+<img width="100%" src="https://capsule-render.vercel.app/api?type=waving&color=0:4285F4,100:0d1117&height=180&section=header&text=Argentina%20Internet%20Analytics&fontSize=38&fontColor=ffffff&animation=twinkling&fontAlignY=38&desc=Telecom%20Market%20Analysis%20%7C%20ENACOM%20Data%20%7C%20Power%20BI%20Dashboard&descAlignY=60&descSize=17&descColor=a0c4ff" />
 
-## Introducción
+<div align="center">
 
-En la actualidad, las telecomunicaciones han evolucionado para convertirse en uno de los pilares fundamentales de la sociedad moderna. Desde la transmisión de información a través de medios electrónicos como la telefonía y la televisión hasta el intercambio de datos en tiempo real a través del internet, estos servicios son esenciales para la vida diaria. Particularmente, el internet ha permitido que personas y organizaciones de todo el mundo se mantengan conectadas, impulsando cambios significativos en la forma en que trabajamos, nos comunicamos y consumimos información.
+![Python](https://img.shields.io/badge/Python-3776AB?style=for-the-badge&logo=python&logoColor=white)
+![Power BI](https://img.shields.io/badge/Power%20BI-F2C811?style=for-the-badge&logo=powerbi&logoColor=black)
+![Pandas](https://img.shields.io/badge/Pandas-150458?style=for-the-badge&logo=pandas&logoColor=white)
+![Jupyter](https://img.shields.io/badge/Jupyter-F37626?style=for-the-badge&logo=jupyter&logoColor=white)
 
-En Argentina, el sector de las telecomunicaciones ha experimentado un crecimiento notable, colocándose a la vanguardia en América Latina con más de 62 millones de conexiones para 2020. Este crecimiento ha sido crucial para mantener a la sociedad argentina conectada, especialmente durante situaciones críticas como la pandemia global, que incrementó la dependencia en servicios de comunicación continua.
+</div>
 
-Mi rol en este proyecto es el de Analista de Datos para una empresa ficticia del sector telecomunicaciones, con el objetivo de realizar un análisis detallado del comportamiento del mercado nacional. La principal área de interés es el acceso a internet, pero también se abordarán otros servicios de comunicación para proporcionar una visión integral que permita identificar oportunidades de mejora y crecimiento, optimizando la calidad del servicio y ajustando las estrategias comerciales de la empresa.
+---
 
-## Descripción
+## 📌 Overview
 
-En este proyecto, asumí el rol de Analista de Datos para colaborar con la empresa ENACOM en un contexto ficticio. Mi tarea consistió en llevar a cabo un análisis exhaustivo para identificar tendencias en la evolución del acceso a internet en Argentina durante la última década. Adicionalmente, se realizaron análisis para descubrir patrones ocultos en los datos y se crearon visualizaciones que faciliten la comprensión de los mismos. Este trabajo busca ayudar a ENACOM a tomar decisiones estratégicas bien fundamentadas, aprovechando las oportunidades del mercado y mejorando la promoción de sus servicios.
+End-to-end data analytics project analyzing the **evolution of internet access in Argentina** over the last decade using ENACOM public data. Includes full ETL pipeline, exploratory data analysis, KPI definition, and an interactive Power BI dashboard to support strategic decisions.
 
-## Tabla de Contenido
+**Role:** Data Analyst (solo project)  
+**Context:** Simulated consulting engagement for ENACOM (Argentina's telecommunications regulator)
 
-1. [Introducción](#Introducción)
-2. [Descripción](#Descripción)
-3. [KPI](#KPI)
-4. [Análisis de Datos](#Análisis-de-Datos)
-5. [Autores](#Autores)
+---
 
-## KPI
+## 🎯 KPIs Defined
 
-Durante el desarrollo del dashboard en Power BI, se definieron dos KPI principales para medir el rendimiento y establecer objetivos de crecimiento:
+| KPI | Target | Formula |
+|---|---|---|
+| **Internet access per 100 households** | +2% growth per quarter, per province | `(New Access - Current Access) / Current Access × 100` |
+| **Internet access per 100 individuals** | +4.2% growth per quarter, per province | Same formula, per-capita basis |
 
-- **Incremento del 2% en el acceso al servicio de internet para el próximo trimestre, cada 100 hogares, por provincia.**
+---
 
-  La fórmula empleada para calcular este KPI es:
-  \[
-  KPI = \frac{(\text{Nuevo acceso} - \text{Acceso actual})}{\text{Acceso actual}} \times 100
-  \]
-  Aquí, "Nuevo_acceso" representa el número de hogares con acceso a Internet previsto para el próximo trimestre, y "Accesos_Totales_Porcentaje_2023" corresponde al acceso actual.
+## 🔍 Key Findings
 
-- **Incremento del 4.2% en el acceso al servicio de internet para el próximo trimestre, cada 100 individuos, por provincia.**
+### 📡 ADSL Technology Access
+Distribution shows high concentration at low values with notable outliers — asymmetric distribution skewed toward lower connectivity areas.
 
-  En este caso:
-  - "Nuevos_ingresos" se refiere al número de individuos con acceso a Internet tras el próximo trimestre.
-  - "Acceso_cada_100_hab_2023" representa el acceso actual por cada 100 habitantes.
-
-## Análisis de Datos
-
-### Acceso por la Tecnología de Conexión ADSL
 ![Acceso a la tecnología](Imagenes/Accesos_tecnologia.png)
 
-**Conclusiones:**
+### 👤 Access per 100 Individuals
+Consistent quarterly growth throughout the decade, with a **notable spike in 2020–2021** driven by COVID-19 pandemic (remote work + distance learning). Peak values reached in 2023.
 
-1. **Distribución de ADSL_LOG:** 
-   La distribución presenta una alta concentración en valores bajos (cerca de 11), con algunos valores atípicos en el extremo superior, lo que indica posibles outliers que pueden influir en el análisis estadístico.
+![Acceso por 100 habitantes](Imagenes/Evolucion_Acceso_cada_100_Habitantes.png)
 
-2. **Visualización con Gráfico de Violín:** 
-   Confirma la distribución asimétrica, mostrando una densidad significativa en los valores bajos y una dispersión notable hacia valores más altos.
+### 🏠 Access per 100 Households by Province
+Significant regional disparities: **Buenos Aires and Córdoba** show highest connectivity medians; **Formosa and Santiago del Estero** lag significantly behind.
 
-3. **Rango de Valores:** 
-   La mayoría de los valores se encuentran entre 0 y 6, con un pequeño grupo alcanzando hasta 12, lo que sugiere una distribución sesgada hacia valores más bajos.
+![Acceso por 100 hogares](Imagenes/Porcen_Accesos_cda_100_hogares.png)
 
-**Resumen:** La variable ADSL_LOG muestra una distribución asimétrica con una concentración de valores bajos y algunos outliers en el extremo superior.
+---
 
-### Acceso por Cada 100 Individuos
-![Accesos por cada 100 hogares](Imagenes/Evolucion_Acceso_cada_100_Habitantes.png)
+## 🔄 Pipeline
 
-**Conclusiones del Análisis de los Gráficos de Accesos por Trimestre:**
+```
+ENACOM Raw Data ──► ETL (Python + Pandas) ──► EDA + KPI Analysis ──► Power BI Dashboard
+```
 
-1. **Crecimiento Continuo:** 
-   A lo largo de los trimestres, se observa un aumento constante en el porcentaje de accesos por cada 100 habitantes, reflejando un crecimiento sostenido en la conectividad.
+- Full ETL pipeline: cleaning, normalization, type conversion
+- EDA with trend analysis and outlier detection
+- Interactive Power BI dashboard with provincial-level KPIs
 
-2. **Consistencia entre Trimestres:** 
-   La tendencia ascendente es consistente en todos los trimestres, lo que sugiere que no hay diferencias significativas en el crecimiento del acceso a internet entre los distintos periodos del año.
+---
 
-3. **Impacto de la Pandemia:** 
-   Entre 2020 y 2021, se observa un incremento notable, probablemente impulsado por la pandemia de COVID-19 y la necesidad de teletrabajo y educación a distancia.
+## ⚒️ Tech Stack
 
-4. **Punto Máximo en 2023:** 
-   El año 2023 muestra el valor más alto en cada trimestre, alcanzando un 0.24% de accesos por cada 100 habitantes.
+| Layer | Tools |
+|---|---|
+| **Processing** | Python, Pandas |
+| **Analysis** | Jupyter Notebook, Matplotlib |
+| **Visualization** | Power BI |
 
-**Resumen:** El análisis evidencia un crecimiento uniforme y sostenido en el acceso a internet, con un pico notable durante la pandemia y un crecimiento continuo hasta 2023.
+---
 
-### Porcentaje de Acceso por Cada 100 Hogares
-![Boxplot](Imagenes/Porcen_Accesos_cda_100_hogares.png)
+## ▶️ How to Run
 
-**Conclusiones:**
+```bash
+git clone https://github.com/TomasFeiertag/Proyecto-Data-Analytics.git
+cd Proyecto-Data-Analytics
+pip install -r requirements.txt
+# Open notebooks/ in Jupyter, then open the .pbix in Power BI Desktop
+```
 
-1. **Disparidades entre Provincias:** 
-   Existen diferencias significativas en el acceso a internet entre las distintas provincias, con algunas mostrando una conectividad mucho mayor que otras.
+---
 
-2. **Provincias Destacadas:** 
-   Buenos Aires y Córdoba tienen las medianas más altas, indicando un mejor acceso, mientras que Formosa y Santiago del Estero presentan menores niveles de conectividad.
+## 👤 Author
 
-3. **Outliers:** 
-   Se observan valores atípicos en algunas provincias, lo que puede indicar áreas con conectividad excepcionalmente alta o baja en comparación con la tendencia general.
+**Tomás Feiertag** — Data Scientist · NLP & LLMs @ Movistar
 
-**Resumen:** El análisis de la distribución del acceso a internet por provincia revela una significativa variabilidad, destacando tanto disparidades regionales como la presencia de outliers que pueden necesitar atención especial.
+[![LinkedIn](https://img.shields.io/badge/LinkedIn-0077B5?style=flat-square&logo=linkedin&logoColor=white)](https://linkedin.com/in/tfeiertag/)
+[![GitHub](https://img.shields.io/badge/GitHub-181717?style=flat-square&logo=github&logoColor=white)](https://github.com/TomasFeiertag)
 
-## Autores
-
-Este proyecto fue realizado por **Tomas Feiertag**.
+<img width="100%" src="https://capsule-render.vercel.app/api?type=waving&color=0:0d1117,100:4285F4&height=100&section=footer" />
